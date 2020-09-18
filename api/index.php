@@ -2,7 +2,7 @@
 require_once("DB.php");
 require_once("Mail.php");
 
-$db = new DB("localhost", "SocialNetwork", "root", "root");
+$db = new DB("localhost", "socialnetwork", "root", "");
 
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
@@ -174,7 +174,7 @@ echo json_encode($messages);
         echo '{ "Success": "Message Sent!" }';
 
         if ($_GET['url'] == "message") {
-
+          1;
         } else if ($_GET['url'] == "users") {
 
                 $postBody = file_get_contents("php://input");
